@@ -24,4 +24,4 @@ jobs:
         docker tag my-image:latest username/my-image:latest
 
     - name: Push Docker image to Docker Hub
-      run: docker push username/my-image:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-image:latest
